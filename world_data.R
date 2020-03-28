@@ -38,7 +38,6 @@ plot(
   type = "l",
   xlim = c(0, 15),
   ylim = c(0, 80),
-  
   xlab = "Days since first death",
   ylab = "Number of deaths"
   )
@@ -52,8 +51,8 @@ lines(uk$day_no, uk$deaths, col = "brown")
 
 legend("topleft", 
   inset = .05, 
-           c("Italy","Denmark", "Sweden","Norway", "US", "Austria", "UK"), 
-  fill =   c("black", "red", "orange" ,"blue","grey" , "green", "brown")
+  legend = c("Italy","Denmark", "Sweden","Norway", "US", "Austria", "UK"), 
+  fill = c("black", "red", "orange" ,"blue","grey" , "green", "brown")
   )
 
 
