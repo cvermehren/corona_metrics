@@ -36,8 +36,8 @@ plot(
   it$day_no, 
   it$deaths, 
   type = "l",
-  xlim = c(0, 15),
-  ylim = c(0, 80),
+  xlim = c(0, 30),
+  ylim = c(0, 200),
   xlab = "Days since first death",
   ylab = "Number of deaths"
   )
@@ -54,5 +54,6 @@ legend("topleft",
   legend = c("Italy","Denmark", "Sweden","Norway", "US", "Austria", "UK"), 
   fill = c("black", "red", "orange" ,"blue","grey" , "green", "brown")
   )
+text(27,190, as.character(paste("data as of",max(dt$date))), cex = 0.7 )
 
 
