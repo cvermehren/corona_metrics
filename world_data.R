@@ -57,3 +57,13 @@ legend("topleft",
 text(27,190, as.character(paste("data as of",max(dt$date))), cex = 0.7 )
 
 
+# plot(
+#   it$day_no, 
+#   it$deaths, 
+#   type = "l",
+#   #log = "y",
+#   #xlim = c(0, 30),
+#   #ylim = c(0, 200),
+#   xlab = "Days since first death",
+#   ylab = "Number of deaths"
+# )
