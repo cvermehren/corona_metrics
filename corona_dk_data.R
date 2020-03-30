@@ -8,6 +8,12 @@ getInfo <- function(endpoint){
   data <- fromJSON(call, flatten = TRUE)
 }
 
+
+hopkins <- getInfo("john_hopkins_data")
+
+
+
+worldometers <- getInfo("worldometers_overview")
 ssi_cases <- getInfo("ssi_cases")
 ssi_hospitalized <- getInfo("ssi_hospitalized")
 
