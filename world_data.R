@@ -41,20 +41,21 @@ plot(
   xlab = "Days since first death",
   ylab = "Number of deaths"
   )
-title("Number of deaths by day")
-lines(dk$day_no, dk$deaths, col = "red")
+#title(main = "Number of deaths by day", sub = "shsjdhjsdh")
 lines(se$day_no, se$deaths, col = "orange")
 lines(no$day_no, no$deaths, col = "blue")
 lines(us$day_no, us$deaths, col = "grey")
 lines(aus$day_no, aus$deaths, col = "green")
 lines(uk$day_no, uk$deaths, col = "brown")
-
+lines(dk$day_no, dk$deaths, col = "red", lwd=2)
 legend("topleft", 
   inset = .05, 
   legend = c("Italy","Denmark", "Sweden","Norway", "US", "Austria", "UK"), 
   fill = c("black", "red", "orange" ,"blue","grey" , "green", "brown")
   )
-text(27,190, as.character(paste("data as of",max(dt$date))), cex = 0.7 )
+#text(27,190, as.character(paste("data as of",max(dt$date))), cex = 0.7 )
+mtext(side=3, line=1.8, at=-1.2, adj=0, cex=1.1, expression(bold("Number of deaths by day")))
+mtext(side=3, line=0.8, at=-1.2, adj=0, cex=0.75, as.character(paste("Data as of",max(dt$date))))
 
 
 # plot(

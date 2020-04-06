@@ -43,9 +43,9 @@ dt_hosp <- dt_hosp[, list(
 # https://github.com/midas-network/COVID-19/tree/master/parameter_estimates/2019_novel_coronavirus#deaths
 
 # Assumed mortality rate (deaths to true cases)
-mortality <- 0.01
+mortality <- 0.0066
 
-time_to_death <- mean(c(15.2, 22.3,18, 13.8)) # Average of measure numbers from source
+time_to_death <- 18 #mean(c(15.2, 22.3,18, 13.8)) # Average of measure numbers from source
 doubling_time <- 4.6 # Some sources say even lower
 
 # Formula for true cases given assumed mortality rate of true cases
@@ -72,3 +72,15 @@ plot(trend$date, trend$deaths_to_cases, type = "l", ylim = c(0, max(trend$deaths
 plot(trend$date, trend$hosp_to_cases, type = "l", ylim = c(0, max(trend$hosp_to_cases, na.rm = T )))
 plot(trend$date, trend$resp_to_hosp, type = "l", ylim = c(0, max(trend$resp_to_hosp, na.rm = T )))
 plot(trend$date, trend$deaths_to_resp, type = "l", ylim = c(0, max(trend$deaths_to_resp, na.rm = T )))
+
+par(mfrow=c(1,1))
+
+#plot(trend$date ,trend$cases, type ="l")
+plot(trend$date,
+     trend$hospitalized, 
+     type="l",
+     xlab = as.character(paste0("Data as of ",max(trend$date))),
+     ylab=""
+     )
+title(main = "Number of hospitalized by day", sub = )
+
