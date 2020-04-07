@@ -37,7 +37,7 @@ plot(
   it$deaths, 
   type = "l",
   xlim = c(0, 30),
-  ylim = c(0, 200),
+  ylim = c(0, 550),
   xlab = "Days since first death",
   ylab = "Number of deaths"
   )
